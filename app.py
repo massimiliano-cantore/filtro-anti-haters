@@ -1,4 +1,10 @@
 """Demo Gradio del filtro anti-haters (DistilBERT) per Hugging Face Spaces."""
+try:  # hardware ZeroGPU di Hugging Face: `spaces` va importato prima di torch
+    import spaces
+    zero_gpu = spaces.GPU
+except ImportError:  # esecuzione locale o su CPU
+    def zero_gpu(fn):
+        return fn
 import os
 import sys
 
@@ -10,8 +16,8 @@ try:
 except ImportError:  # su Spaces predict.py è copiato accanto ad app.py
     from predict import LABELS, ToxicityClassifier
 
-MODEL_ID = os.getenv("MODEL_ID", "massimiliano-cantore/filtro-anti-haters-distilbert")
-clf = ToxicityClassifier(MODEL_ID)
+MODEL_ID = os.getenv("MODEL_ID", "MassimilianoCantore/filtro-anti-haters-distilbert")
+clf = ToxicityClassifier(MODEL_ID, device="cpu")  # CPU: basta per una frase alla volta, funziona su ogni hardware
 
 LABELS_IT = {
     "toxic": "Tossico",
@@ -31,6 +37,7 @@ EXAMPLES = [
 ]
 
 
+@zero_gpu
 def classify(text: str):
     text = (text or "").strip()
     if not text:
