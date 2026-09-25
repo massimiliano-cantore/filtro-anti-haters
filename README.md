@@ -76,4 +76,4 @@ da copiare in `MyDrive/Filter_Toxic_Comments_dataset.csv`.
 Python · TensorFlow/Keras · Keras Tuner · gensim · PyTorch · Hugging Face Transformers · scikit-learn · Gradio
 
 ---
-Massimiliano Cantore · [LinkedIn](https://www.linkedin.com/in/UTENTE_LINKEDIN)
+Massimiliano Cantore · [LinkedIn](https://www.linkedin.com/in/massimiliano-cantore-3b19704a/)
