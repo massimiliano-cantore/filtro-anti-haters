@@ -1,0 +1,9 @@
+modello,F1 micro,F1 macro
+"BiLSTM v1
+(Master)",0.687,0.58
+"BiLSTM v2
+(bug corretti)",0.726,0.605
+"BiLSTM v3
+(pulizia migliorata)",0.736,0.613
+"DistilBERT
+(fine-tuning)",0.79,0.683

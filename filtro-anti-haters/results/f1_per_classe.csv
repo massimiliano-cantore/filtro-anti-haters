@@ -1,0 +1,7 @@
+classe,BiLSTM v3,DistilBERT
+toxic,0.774,0.827
+severe_toxic,0.512,0.509
+obscene,0.81,0.835
+threat,0.405,0.602
+insult,0.73,0.79
+identity_hate,0.445,0.536

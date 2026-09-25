@@ -1,0 +1,15 @@
+# notebook 01-02 (BiLSTM)
+tensorflow>=2.15
+keras-tuner
+gensim>=4.3
+# notebook 03 e demo (DistilBERT)
+torch
+transformers>=4.40
+huggingface_hub
+gradio>=4.0
+# comuni
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
